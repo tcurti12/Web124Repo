@@ -1,0 +1,70 @@
+<!--Tanner Curtis, 5/1/2025. Changed webpage to be about birds. Got rid of placeholder text, and added new pictures that were relevant to the new webpage-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="style-FINISHED.css">
+  <link rel="icon" href="https://fav.farm/✅" />
+</head>
+<body>
+
+  <header>
+    <h1>Cool Birds.</h1>
+  </header>
+
+  <nav id="main">
+    <ul>
+      <li class="logo"><a href="#">BIRD.</a></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Images</a></li>
+      <li><a href="#">Locations</a></li>
+      <li><a href="#">Maps</a></li>
+    </ul>
+  </nav>
+
+  <div class="site-wrap">
+    <p>This bird is a Cardinal. Male Cardinals are red.</p>
+    <img src="cardinal.webp" alt="A red cardinal" width="400"  class="align-left slide-in">
+    <br>
+    <br>
+    <br>
+    <br>
+    <p>This is a Toucan. They are known for their large beaks.</p>
+    <img src="toucan.jpg" alt="A toucan" width="400" class="align-right slide-in">
+    <br>
+    <br>
+    <br>
+    <br>
+    <p>This is a Pelican. They are known for having huge mouths, and swollowing their food whole.</p>
+    <img src="pelican.jpg" alt="A pelican" width="400" class="align-right slide-in">
+    <br>
+    <br>
+    <br>
+    <br>
+    <p>There are so many different types of birds!</p>
+  </div>
+
+  <script>
+    // Not a ton of code, but hard to
+    const nav = document.querySelector('#main');
+    let topOfNav = nav.offsetTop;
+
+    function fixNav() {
+      if (window.scrollY >= topOfNav) {
+        document.body.style.paddingTop = nav.offsetHeight + 'px';
+        document.body.classList.add('fixed-nav');
+      } else {
+        document.body.classList.remove('fixed-nav');
+        document.body.style.paddingTop = 0;
+      }
+    }
+
+    window.addEventListener('scroll', fixNav);
+
+  </script>
+
+
+</body>
+</html>
